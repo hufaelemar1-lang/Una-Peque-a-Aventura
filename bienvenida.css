@@ -1,0 +1,92 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fondo */
+body {
+  background-image: url('fondo-periodico.jpg'); /* tu fondo tipo periódico o pared */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'IM Fell English', serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 15px;
+}
+
+/* Contenedor principal */
+.bienvenida-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Hoja pergamino */
+.hoja-pergamino {
+  position: relative;
+  background: linear-gradient(to bottom, #fff8dc, #fbeec1);
+  border: 3px solid #bfa76f;
+  border-radius: 15px;
+  padding: 50px 25px 30px 25px; /* espacio para chincheta arriba */
+  width: 90%;
+  max-width: 450px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Chincheta */
+.chincheta {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 80px;
+  z-index: 2;
+}
+
+/* Rectángulo divertido para el texto */
+.rectangulo-divertido {
+  background-color: rgba(255, 255, 240, 0.95); /* más claro que el pergamino */
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  padding: 20px 15px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Texto en cursiva dentro del rectángulo */
+.rectangulo-divertido p {
+  font-size: 16px;
+  line-height: 1.5;
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+/* Botón CONTINUAR centrado dentro de la hoja */
+.btn-continuar {
+  padding: 14px 30px;
+  font-size: 20px;
+  font-family: 'IM Fell English', serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  background-color: #ff0000; /* rojo vivo */
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: transform 0.2s ease;
+}
+
+.btn-continuar:hover {
+  transform: scale(1.05);
+}

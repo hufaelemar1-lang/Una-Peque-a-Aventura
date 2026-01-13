@@ -1,0 +1,95 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fondo periódico */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background-image: url('fondo-periodico.jpg'); /* tu fondo periódico */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+/* Contenedor principal */
+.portada-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Título estilo recortes */
+.titulo-portada {
+  display: flex;
+  flex-direction: column; /* apilar palabras verticalmente */
+  align-items: center;
+  margin-bottom: 100px; /* más espacio antes del botón */
+}
+
+/* Cada palabra en línea */
+.palabra {
+  display: flex; /* letras en línea */
+  margin-bottom: 20px; /* espacio entre palabras */
+}
+
+/* Letras con efecto collage */
+.palabra img {
+  width: 60px; /* letras más grandes */
+  height: auto;
+  margin: 0 4px; /* un poco más de espacio entre letras */
+  transition: transform 0.2s ease;
+}
+
+.palabra img:nth-child(odd) {
+  transform: rotate(-5deg);
+}
+
+.palabra img:nth-child(even) {
+  transform: rotate(3deg);
+}
+
+/* Botón CONTINUAR centrado y más abajo */
+.btn-continuar {
+  padding: 14px 30px;
+  font-size: 20px;
+  font-family: 'IM Fell English', serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  background-color: #ff0000; /* rojo vivo */
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: transform 0.2s ease;
+}
+
+.btn-continuar:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive móvil */
+@media (max-width: 480px) {
+  .palabra img {
+    width: 60px; /* letras más grandes que antes, pero adaptadas a móvil */
+  }
+
+  .btn-continuar {
+    padding: 12px 30px;
+    font-size: 18px;
+  }
+
+  .portada-container {
+    padding: 10px;
+  }
+}
